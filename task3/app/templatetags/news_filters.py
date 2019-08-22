@@ -52,7 +52,8 @@ def format_num_comments(value):
 def sformat_elftext(value, count):
 
     value_list = value.split(' ')
-    value = f'{" ".join(value_list[:count])} . . . . . {" ".join(value_list[-count:])}'
+    if len(value_list) > count * 2:
+        value = f'{" ".join(value_list[:count])} . . . . . {" ".join(value_list[-count:])}'
 
     return value
 

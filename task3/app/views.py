@@ -20,4 +20,4 @@ def top_reddit_view(request):
         'posts': posts,
         'prefix': 'https://reddit.com'
     }
-    return render(request, template_name, context)
+    return render(request, template_name,                  context)

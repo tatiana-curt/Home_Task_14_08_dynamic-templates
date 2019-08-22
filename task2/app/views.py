@@ -1,10 +1,13 @@
 from django.shortcuts import render
 
 
-def home_view(request):
+def main_view(request):
     template_name = 'app/main.html'
     return render(request, template_name)
 
+def home_view(request):
+    template_name = 'app/home.html'
+    return render(request, template_name)
 
 def about_view(request):
     template_name = 'app/about.html'
@@ -17,7 +20,7 @@ def contacts_view(request):
 
 
 def examples_view(request):
-    template_name = 'app/examples2.html'
+    template_name = 'app/examples.html'
 
     items = [{
         'title': 'Apple II',
